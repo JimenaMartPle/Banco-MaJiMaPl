@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Banco-MaJiMaPl</string>
+    <string name="login">LOG IN</string>
+    <string name="user">Username</string>
+    <string name="pass">Password</string>
+    <string name="required">Required</string>
+    <string name="signOut">Exit</string>
+    <string name="enter">ENTER</string>
+
+    <string name="welcomeImg">background image</string>
+    <string name="welcomeSignIn">Sign in</string>
+    <string name="welcome">Welcome</string>
+
+    <!-- Validation errors -->
+    <string name="error_user_empty">Enter your username</string>
+    <string name="error_pass_empty">Enter your password</string>
+    <string name="error_pass_length">Password must be 4 digits long</string>
+
+    <!-- Main -->
+    <string name="mainWelcome">Welcome,\n%1$s</string>
+    <string name="opButText1">Global position</string>
+    <string name="opButText2">Transactions</string>
+    <string name="opButText3">Transfers</string>
+    <string name="opButText4">Change password</string>
+    <string name="opButText5">Promotions</string>
+    <string name="opButText6">ATMs</string>
+    <string name="opButText7">Exit</string>
+</resources>

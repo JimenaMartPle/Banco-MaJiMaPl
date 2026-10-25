@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Banco-MaJiMaPl</string>
+    <string name="bankName" translatable="false">Bank</string>
+    <string name="login">INICIAR SESIÓN</string>
+    <string name="user">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="required">Obligatorio</string>
+    <string name="signOut">Salir</string>
+    <string name="enter">ENTRAR</string>
+    <string name="welcome">Bienvenidx</string>
+    <string name="bank" translatable="false">Bank button</string>
+    <string name="welcomeImg">Imagen de fondo</string>
+    <string name="welcomeTit" translatable="false">REIMAGINING\nFINANCE</string>
+    <string name="welcomeSubtit" translatable="false">Restless generation. Your rules.</string>
+    <string name="welcomeSignIn">Iniciar sesión</string>
+
+    <!-- Errores de validación -->
+    <string name="error_user_empty">Introduce el usuario</string>
+    <string name="error_pass_empty">Introduce la contraseña</string>
+    <string name="error_pass_length">La contraseña debe tener 4 dígitos</string>
+
+    <!-- Main -->
+    <string name="mainWelcome">Bienvenidx,\n%1$s</string>
+    <string name="opButText1">Posición global</string>
+    <string name="opButText2">Movimientos</string>
+    <string name="opButText3">Transferencias</string>
+    <string name="opButText4">Cambiar contraseña</string>
+    <string name="opButText5">Promociones</string>
+    <string name="opButText6">Cajeros</string>
+    <string name="opButText7">Salir</string>
+</resources>

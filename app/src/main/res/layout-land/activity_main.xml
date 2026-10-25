@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurfaceContainerLow"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Card 1: Nombre del banco -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/bankNameCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bankName"
+                        android:fontFamily="@font/rocksalt_regular"
+                        android:letterSpacing="0.05"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="@dimen/nameBankSize"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: Bienvenida (Abarca todo el ancho) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/welcomeCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorTertiary"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+                app:layout_constraintTop_toBottomOf="@id/bankNameCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/avatarImg"
+                        android:layout_width="@dimen/avatarImg"
+                        android:layout_height="@dimen/avatarImg"
+                        android:src="@drawable/avatar_girl"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/esquinasRedondeadas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/welcomeMsg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/mainWelcome"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorSecondary"
+                        android:textAlignment="center"
+                        tools:text="@string/mainWelcome"
+                        app:layout_constraintStart_toEndOf="@id/avatarImg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 3: Operaciones en 2 columnas -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/operacionesCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+                app:layout_constraintTop_toBottomOf="@id/welcomeCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp">
+
+                    <!-- Fila 1: Botón 1 y 2 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText1"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_posicionglobal"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/opButton2"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText2"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_movimientos"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintStart_toEndOf="@id/opButton1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <!-- Fila 2: Botón 3 y 4 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText3"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_transferencias"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/opButton4"
+                        app:layout_constraintTop_toBottomOf="@id/opButton1"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText4"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_cambiarcont"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintStart_toEndOf="@id/opButton3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/opButton2"/>
+
+                    <!-- Fila 3: Botón 5 y 6 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText5"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_promo"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/opButton6"
+                        app:layout_constraintTop_toBottomOf="@id/opButton3"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText6"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_cajeros"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintStart_toEndOf="@id/opButton5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/opButton4"/>
+
+                    <!-- Fila 4: Botón 7 (Salir ocupa todo el ancho) -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/opButton7"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/operationButton"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/opButText7"
+                        android:textSize="@dimen/opButtonText"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/ic_salir"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/opButton5"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BottomBar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:navigationIcon="@drawable/ic_menu"
+        app:fabAlignmentMode="center"
+        app:fabAnimationMode="scale"
+        app:fabCradleMargin="8dp"
+        app:fabCradleRoundedCornerRadius="16dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:backgroundTint="?attr/colorOnTertiaryContainer"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bank"
+        android:contentDescription="@string/bank"
+        app:backgroundTint="?attr/colorTertiary"
+        app:tint="?attr/colorOnTertiary"
+        app:shapeAppearanceOverlay="@style/FabEsquinasRedondeadas"
+        app:layout_anchor="@id/bottomAppBar"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

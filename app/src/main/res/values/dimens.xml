@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nameBankSize">30sp</dimen>
+    <dimen name="title">20sp</dimen>
+    <dimen name="input">200dp</dimen>
+    <dimen name="avatarImg">88dp</dimen>
+    <dimen name="titleWelcome">28sp</dimen>
+    <dimen name="butCornerRadius">10dp</dimen>
+    <dimen name="operationButton">60dp</dimen>
+    <dimen name="opButtonText">14sp</dimen>
+</resources>

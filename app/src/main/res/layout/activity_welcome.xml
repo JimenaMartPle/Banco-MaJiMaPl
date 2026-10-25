@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorSurfaceContainerLow">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/welcomeGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/welcomeGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/welcomeGuideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/rocksalt_regular"
+        android:textColor="?attr/colorPrimary"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textSize="@dimen/titleWelcome"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/welcomeGuideline1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/welcomeImg"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backwelcome"
+        android:contentDescription="@string/welcomeImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/welcomeGuideline1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/initWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="?attr/colorTertiaryContainer"
+        android:textColor="?attr/colorOnTertiary"
+        android:text="@string/welcomeSignIn"
+        android:fontFamily="@font/opensans_semibold"
+        app:cornerRadius="@dimen/butCornerRadius"
+        app:layout_constraintBottom_toTopOf="@id/welcomeGuideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/sora_bold"
+        android:textColor="?attr/colorPrimary"
+        android:text="@string/welcomeTit"
+        android:textAlignment="center"
+        android:textSize="@dimen/titleWelcome"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/welcomeGuideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/opensans_medium"
+        android:textColor="?attr/colorPrimary"
+        android:text="@string/welcomeSubtit"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/welcomeGuideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
