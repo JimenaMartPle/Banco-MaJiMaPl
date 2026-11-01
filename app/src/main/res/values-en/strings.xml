@@ -7,10 +7,11 @@
     <string name="required">Required</string>
     <string name="signOut">Exit</string>
     <string name="enter">ENTER</string>
-
     <string name="welcomeImg">background image</string>
     <string name="welcomeSignIn">Sign in</string>
     <string name="welcome">Welcome</string>
+    <string name="guardarBtn">Save</string>
+    <string name="cancelarBtn">Cancel</string>
 
     <!-- Validation errors -->
     <string name="error_user_empty">Enter your username</string>
@@ -26,4 +27,9 @@
     <string name="opButText5">Promotions</string>
     <string name="opButText6">ATMs</string>
     <string name="opButText7">Exit</string>
+
+    <!-- Main - change password-->
+    <string name="changePassText">Enter your new password (4 digits):</string>
+    <string name="cambioOkText">Password successfully updated</string>
+
 </resources>

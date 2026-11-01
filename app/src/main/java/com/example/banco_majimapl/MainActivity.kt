@@ -55,18 +55,18 @@ class MainActivity : AppCompatActivity() {
 
         AlertDialog.Builder(this)
             .setTitle(R.string.opButText4)
-            .setMessage("Introduce tu nueva contraseña (4 dígitos):")
+            .setMessage(R.string.changePassText)
             .setView(container)
-            .setPositiveButton("Guardar") { dialog, _ ->
+            .setPositiveButton(R.string.guardarBtn) { dialog, _ ->
                 val newPassword = input.text.toString()
                 if (newPassword.length == 4) {
-                    Toast.makeText(this, "Contraseña actualizada con éxito", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.cambioOkText, Toast.LENGTH_SHORT).show()
                     dialog.dismiss()
                 } else {
                     Toast.makeText(this, getString(R.string.error_pass_length), Toast.LENGTH_SHORT).show()
                 }
             }
-            .setNegativeButton("Cancelar") { dialog, _ ->
+            .setNegativeButton(R.string.cancelarBtn) { dialog, _ ->
                 dialog.cancel()
             }
             .show()

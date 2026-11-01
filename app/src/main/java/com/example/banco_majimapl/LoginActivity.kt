@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
             binding.passwordLayout.error = when {
                 password.isEmpty() -> getString(R.string.error_pass_empty)
-                password.length < 4 -> getString(R.string.error_pass_length)
+                password.length != 4 -> getString(R.string.error_pass_length)
                 else -> null
             }
 

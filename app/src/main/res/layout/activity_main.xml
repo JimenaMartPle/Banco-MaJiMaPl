@@ -79,18 +79,18 @@
 
                 <TextView
                     android:id="@+id/welcomeMsg"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="16dp"
                     android:text="@string/mainWelcome"
-                    android:textSize="18sp"
-                    android:textColor="?attr/colorSecondary"
                     android:textAlignment="center"
-                    tools:text="@string/mainWelcome"
-                    app:layout_constraintStart_toEndOf="@id/avatarImg"
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/avatarImg"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    tools:text="Bienvenidx, 11223344G" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>

@@ -14,6 +14,8 @@
     <string name="welcomeTit" translatable="false">REIMAGINING\nFINANCE</string>
     <string name="welcomeSubtit" translatable="false">Restless generation. Your rules.</string>
     <string name="welcomeSignIn">Iniciar sesión</string>
+    <string name="guardarBtn">Guardar</string>
+    <string name="cancelarBtn">Cancelar</string>
 
     <!-- Errores de validación -->
     <string name="error_user_empty">Introduce el usuario</string>
@@ -21,7 +23,7 @@
     <string name="error_pass_length">La contraseña debe tener 4 dígitos</string>
 
     <!-- Main -->
-    <string name="mainWelcome">Bienvenidx,\n%1$s</string>
+    <string name="mainWelcome">Bienvenidx,%1$s</string>
     <string name="opButText1">Posición global</string>
     <string name="opButText2">Movimientos</string>
     <string name="opButText3">Transferencias</string>
@@ -29,4 +31,8 @@
     <string name="opButText5">Promociones</string>
     <string name="opButText6">Cajeros</string>
     <string name="opButText7">Salir</string>
+
+    <!-- Main - cambiar contraseña-->
+    <string name="changePassText">Introduce tu nueva contraseña (4 dígitos):</string>
+    <string name="cambioOkText">Contraseña actualizada con éxito</string>
 </resources>
