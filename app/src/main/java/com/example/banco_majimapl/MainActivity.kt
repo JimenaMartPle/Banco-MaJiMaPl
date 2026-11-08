@@ -26,6 +26,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupMenuListeners() {
+        // Opción 3: Transferencias
+        binding.opButton3.setOnClickListener{
+            var intent = Intent(this, TransferActivity::class.java)
+            startActivity(intent)
+        }
+
         // Opción 4: Cambiar contraseña
         binding.opButton4.setOnClickListener {
             showChangePasswordDialog()

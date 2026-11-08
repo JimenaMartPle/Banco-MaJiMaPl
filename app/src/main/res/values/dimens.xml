@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="nameBankSize">30sp</dimen>
-    <dimen name="title">20sp</dimen>
     <dimen name="input">200dp</dimen>
     <dimen name="avatarImg">88dp</dimen>
+    <dimen name="basicSpace">8dp</dimen>
+    <dimen name="doubleBasicSpace">16dp</dimen>
+    <dimen name="spinnerHeight">50dp</dimen>
+
+    <!-- Texto -->
+    <dimen name="nameBankSize">30sp</dimen>
     <dimen name="titleWelcome">28sp</dimen>
+    <dimen name="title">22sp</dimen>
+    <dimen name="subtitle">18sp</dimen>
+
+
+    <!-- Botones -->
     <dimen name="butCornerRadius">10dp</dimen>
-    <dimen name="operationButton">60dp</dimen>
+    <dimen name="opButtonHeight">60dp</dimen>
     <dimen name="opButtonText">14sp</dimen>
+    <dimen name="opButtonWidth">300dp</dimen>
+    <dimen name="actionButtonWidth">130dp</dimen>
+
+
 </resources>

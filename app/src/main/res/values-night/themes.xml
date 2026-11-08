@@ -48,6 +48,10 @@
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
 
+    <style name="basicFont">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
     <style name="esquinasRedondeadas">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>

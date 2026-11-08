@@ -12,6 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/doubleBasicSpace"
         android:paddingBottom="85dp">
 
         <!-- Card 1: Nombre del banco -->
@@ -19,7 +20,7 @@
             android:id="@+id/bankNameCard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/basicSpace"
             app:strokeWidth="0dp"
             app:cardElevation="0dp"
             app:cardBackgroundColor="@android:color/transparent"
@@ -118,10 +119,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton1"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText1"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -137,10 +138,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText2"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -156,10 +157,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText3"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -175,10 +176,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText4"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -194,10 +195,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton5"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText5"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -213,10 +214,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton6"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText6"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -232,10 +233,10 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/opButton7"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/operationButton"
+                        android:layout_width="@dimen/opButtonWidth"
+                        android:layout_height="@dimen/opButtonHeight"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/basicSpace"
                         android:text="@string/opButText7"
                         android:textSize="@dimen/opButtonText"
                         android:textStyle="bold"
@@ -265,7 +266,7 @@
         app:navigationIcon="@drawable/ic_menu"
         app:fabAlignmentMode="center"
         app:fabAnimationMode="scale"
-        app:fabCradleMargin="8dp"
+        app:fabCradleMargin="@dimen/basicSpace"
         app:fabCradleRoundedCornerRadius="16dp"
         app:fabCradleVerticalOffset="10dp"
         app:backgroundTint="?attr/colorOnTertiaryContainer"/>

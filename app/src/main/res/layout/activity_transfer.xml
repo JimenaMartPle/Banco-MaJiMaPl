@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurfaceContainerLow"
+    app:theme="@style/basicFont"
+    tools:context=".TransferActivity">
+
+
+    <!-- Card 1: Nombre del banco -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bankNameCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basicSpace"
+        app:strokeWidth="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/doubleBasicSpace"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bankName"
+                android:fontFamily="@font/rocksalt_regular"
+                android:letterSpacing="0.05"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="@dimen/title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card 2: Transferencia -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/doubleBasicSpace"
+        app:strokeWidth="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bankNameCard"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tranferTit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sora_semibold"
+                android:padding="@dimen/basicSpace"
+                android:text="@string/transferenciasTit"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="@dimen/title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subtitleElige"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/basicSpace"
+                android:fontFamily="@font/opensans_semibold"
+                android:padding="@dimen/basicSpace"
+                android:text="@string/eligeTuCuenta"
+                android:textAlignment="textStart"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tranferTit" />
+
+            <Spinner
+                android:id="@+id/numCuentaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spinnerHeight"
+                android:layout_margin="@dimen/doubleBasicSpace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitleElige" />
+
+            <RadioGroup
+                android:id="@+id/radioButGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/doubleBasicSpace"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numCuentaSpinner">
+
+                <RadioButton
+                    android:id="@+id/miCuentaRadioBut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/basicSpace"
+                    android:checked="true"
+                    android:padding="@dimen/basicSpace"
+                    android:text="@string/leftRadioBut"
+                    app:buttonTint="?attr/colorTertiary" />
+
+                <RadioButton
+                    android:id="@+id/otraCuentaRadioBut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/basicSpace"
+                    android:padding="@dimen/basicSpace"
+                    android:text="@string/rightRadioBut"
+                    app:buttonTint="?attr/colorTertiary" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/miCuentaDestinoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spinnerHeight"
+                android:layout_margin="@dimen/doubleBasicSpace"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioButGroup" />
+
+            <EditText
+                android:id="@+id/cuentaDestinaEdit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spinnerHeight"
+                android:layout_margin="@dimen/doubleBasicSpace"
+                android:hint="@string/numCuentaHint"
+                android:inputType="text"
+                android:padding="@dimen/basicSpace"
+                android:textAlignment="center"
+                android:maxLength="28"
+                android:autofillHints="ES00-0000-0000-00-0000000000"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/input_stroke"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioButGroup" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/transfGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.60" />
+
+            <EditText
+                android:id="@+id/importeEdit"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/spinnerHeight"
+                android:layout_marginTop="@dimen/doubleBasicSpace"
+                android:layout_marginStart="50dp"
+                android:padding="@dimen/basicSpace"
+                android:hint="@string/importeEditText"
+                android:inputType="numberDecimal"
+                android:textAlignment="textEnd"
+                android:autofillHints="@string/hintImporteEditText"
+                app:boxStrokeColor="@color/input_stroke"
+                app:layout_constraintEnd_toStartOf="@+id/divisaSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/transfGuideline1"/>
+
+            <Spinner
+                android:id="@+id/divisaSpinner"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/spinnerHeight"
+                android:layout_marginTop="@dimen/doubleBasicSpace"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/transfGuideline1"
+                app:layout_constraintStart_toEndOf="@+id/importeEdit"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/enviarJustiCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/basicSpace"
+                android:button="@drawable/custom_checkbox"
+                android:text="@string/enviarJustificante"
+                app:buttonTint="?attr/colorTertiary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/importeEdit"
+                android:checked="false"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/enviarTransfBut"
+                android:layout_width="@dimen/actionButtonWidth"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/doubleBasicSpace"
+                android:text="@string/enviarBtn"
+                android:textColor="?attr/colorOnTertiaryContainer"
+                app:backgroundTint="?attr/colorTertiaryContainer"
+                app:cornerRadius="@dimen/butCornerRadius"
+                app:layout_constraintEnd_toStartOf="@+id/cancelarTransfBut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enviarJustiCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelarTransfBut"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="@dimen/actionButtonWidth"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/doubleBasicSpace"
+                android:text="@string/cancelarBtn"
+                android:textColor="?attr/colorTertiary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/enviarTransfBut"
+                app:layout_constraintTop_toBottomOf="@+id/enviarJustiCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

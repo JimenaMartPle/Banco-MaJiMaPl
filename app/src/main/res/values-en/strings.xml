@@ -12,6 +12,7 @@
     <string name="welcome">Welcome</string>
     <string name="guardarBtn">Save</string>
     <string name="cancelarBtn">Cancel</string>
+    <string name="enviarBtn">SEND</string>
 
     <!-- Validation errors -->
     <string name="error_user_empty">Enter your username</string>
@@ -28,8 +29,22 @@
     <string name="opButText6">ATMs</string>
     <string name="opButText7">Exit</string>
 
-    <!-- Main - change password-->
+    <!-- Change password dialog-->
     <string name="changePassText">Enter your new password (4 digits):</string>
     <string name="cambioOkText">Password successfully updated</string>
 
+    <!-- Transfers -->
+    <string name="transferenciasTit">Transfers</string>
+    <string name="eligeTuCuenta">Pay from</string>
+    <string name="leftRadioBut">To myself</string>
+    <string name="rightRadioBut">To someone else</string>
+    <string name="numCuentaHint">Paste the account details</string>
+    <string name="enviarJustificante">Send receipt</string>
+    <string name="importeEditText">How much?</string>
+    <string name="hintImporteEditText">0.000,00</string>
+    <string name="justificanteSi">Yep, send it ✨</string>
+    <string name="justificanteNo">Nah, I am good</string>
+    <string name="aCuentaPropia">To yourself:</string>
+    <string name="aCuentaExterna">To:</string>
+    <string name="toastTransferencia">From: %1$s\n%2$s\nAmount: %3$s %4$s\nReceipt? %5$s</string>
 </resources>

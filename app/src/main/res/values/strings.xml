@@ -16,6 +16,7 @@
     <string name="welcomeSignIn">Iniciar sesión</string>
     <string name="guardarBtn">Guardar</string>
     <string name="cancelarBtn">Cancelar</string>
+    <string name="enviarBtn">ENVIAR</string>
 
     <!-- Errores de validación -->
     <string name="error_user_empty">Introduce el usuario</string>
@@ -32,7 +33,22 @@
     <string name="opButText6">Cajeros</string>
     <string name="opButText7">Salir</string>
 
-    <!-- Main - cambiar contraseña-->
+    <!-- Cambiar contraseña diálogo -->
     <string name="changePassText">Introduce tu nueva contraseña (4 dígitos):</string>
     <string name="cambioOkText">Contraseña actualizada con éxito</string>
+
+    <!-- Transferencias -->
+    <string name="transferenciasTit">Transferencias</string>
+    <string name="eligeTuCuenta">Elige tu cuenta</string>
+    <string name="leftRadioBut">A mi otra cuenta</string>
+    <string name="rightRadioBut">A otra persona</string>
+    <string name="numCuentaHint">Pega el número de cuenta</string>
+    <string name="enviarJustificante">Mandar comprobante</string>
+    <string name="importeEditText">¿Monto?</string>
+    <string name="hintImporteEditText">0.000,00</string>
+    <string name="justificanteSi">Obvio sí ✨</string>
+    <string name="justificanteNo">Nop, así está bien</string>
+    <string name="aCuentaPropia">Para ti mismo: </string>
+    <string name="aCuentaExterna">Para: </string>
+    <string name="toastTransferencia">De: %1$s\n%2$s\nMonto: %3$s %4$s\n¿Comprobante? %5$s</string>
 </resources>
