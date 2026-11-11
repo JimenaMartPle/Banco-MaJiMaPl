@@ -18,6 +18,7 @@
     <string name="error_user_empty">Enter your username</string>
     <string name="error_pass_empty">Enter your password</string>
     <string name="error_pass_length">Password must be 4 digits long</string>
+    <string name="error_login_failed">Authentication error</string>
 
     <!-- Main -->
     <string name="mainWelcome">Welcome,\n%1$s</string>
@@ -32,9 +33,10 @@
     <!-- Change password dialog-->
     <string name="changePassText">Enter your new password (4 digits):</string>
     <string name="cambioOkText">Password successfully updated</string>
+    <!-- Inglés -->
+    <string name="error_change_pass">Oops, password change failed 😬</string>
 
     <!-- Transfers -->
-    <string name="transferenciasTit">Transfers</string>
     <string name="eligeTuCuenta">Pay from</string>
     <string name="leftRadioBut">To myself</string>
     <string name="rightRadioBut">To someone else</string>
@@ -47,4 +49,18 @@
     <string name="aCuentaPropia">To yourself:</string>
     <string name="aCuentaExterna">To:</string>
     <string name="toastTransferencia">From: %1$s\n%2$s\nAmount: %3$s %4$s\nReceipt? %5$s</string>
+
+    <!-- Global position -->
+    <string name="contDescNumCuentaPosGlobal">Número de cuenta</string>
+    <string name="contDescSaldoPosGlobal">Saldo de la cuenta</string>
+    <string name="contDescImgPosGlobal">Imagen de la tarjeta</string>
+    <string name="textNumCuentaPosGlobal">%1$s</string>
+    <string name="textSaldoPosGlobal">%1$s €</string>
+
+    <!-- Movements-->
+    <string name="seleccionaSubtit">Pick an account:</string>
+    <string name="detallesSubtit">Recent activity:</string>
+    <string name="textDetalleMov">%1$s</string>
+    <string name="contDescDetalleMovimiento">Details:</string>
+    <string name="textFechaImporteMov">%1$s Amount: %2$.2f</string>
 </resources>

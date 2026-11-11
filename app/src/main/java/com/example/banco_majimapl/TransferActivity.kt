@@ -1,13 +1,18 @@
 package com.example.banco_majimapl
 
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.banco_majimapl.bd.MiBancoOperacional
 import com.example.banco_majimapl.databinding.ActivityTransferBinding
+import com.example.banco_majimapl.pojo.Cliente
+import com.example.banco_majimapl.pojo.Cuenta
 import com.google.android.material.snackbar.Snackbar
+import kotlin.collections.map
 
 class TransferActivity : AppCompatActivity() {
 
@@ -19,19 +24,28 @@ class TransferActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //Spinner
-        val cuentas: Array<String> = arrayOf(
-            "ES60-2100-0418-40-1234567891",
-            "ES90-2080-5801-10-1234567891",
-            "ES12-3456-7890-12-3456789012",
-            "ES98-7654-3210-98-7654321098"
-        )
+        //1. Instanciar API
+        val mbo = MiBancoOperacional.getInstance(this)
 
-        val divisa: Array<String> = arrayOf(
-            "€",
-            "$",
-            "£",
-            "¥"
-        )
+        // 2. Recuperar el cliente enviado desde MainActivity
+        val cliente = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getSerializableExtra("Cliente", Cliente::class.java)
+        } else {
+            @Suppress("DEPRECATION")
+            intent.getSerializableExtra("Cliente") as? Cliente
+        }
+
+        // 3. Obtener la lista de cuentas reales de la API
+        val listaCuentas = mbo?.getCuentas(cliente) as? ArrayList<Cuenta> ?: arrayListOf()
+
+        // 4. Transformar los objetos Cuenta en una lista con solo los números de cuenta
+        val cuentas: Array<String> = if (listaCuentas.isNotEmpty()) {
+            listaCuentas.map { it.getNumeroCuenta() ?: "" }.toTypedArray()
+        } else {
+            arrayOf("Sin cuentas disponibles")
+        }
+
+        val divisa: Array<String> = arrayOf("€", "$", "£", "¥")
 
         // número de cuentas
         val arrayAdapterCuentas = ArrayAdapter(this, R.layout.spinner_cuentas_item, R.id.numCuentaItem, cuentas)

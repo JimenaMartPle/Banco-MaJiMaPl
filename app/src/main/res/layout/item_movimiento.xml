@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardPosicionGlobal"
+    android:layout_width="@dimen/cardWidth"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/cardHeight"
+    android:layout_margin="@dimen/basicSpace"
+    app:strokeWidth="0dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+    app:cardCornerRadius="@dimen/butCornerRadius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgCardMov"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/basicSpace"
+            android:tintMode="?attr/colorPrimaryContainer"
+            android:contentDescription="@string/contDescImgPosGlobal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/detalleMovimientoText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/basicSpace"
+            android:layout_marginTop="5dp"
+            android:text="@string/textDetalleMov"
+            android:fontFamily="@font/opensans_medium"
+            android:contentDescription="@string/contDescDetalleMovimiento"
+            android:textSize="@dimen/subtitle"
+            app:layout_constraintStart_toEndOf="@id/imgCardMov"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/fechaImporteMov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/basicSpace"
+            android:layout_marginTop="@dimen/basicSpace"
+            android:text="@string/textFechaImporteMov"
+            android:contentDescription="@string/contDescSaldoPosGlobal"
+            android:textSize="@dimen/saldoCuentaText"
+            app:layout_constraintStart_toEndOf="@id/imgCardMov"
+            app:layout_constraintTop_toBottomOf="@id/detalleMovimientoText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

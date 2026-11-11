@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.banco_majimapl.databinding.ActivityLoginBinding
 import android.content.Intent
+import android.widget.Toast
+import com.example.banco_majimapl.bd.MiBancoOperacional
+import com.example.banco_majimapl.pojo.Cliente
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -12,6 +15,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Instanciar API
+        val mbo = MiBancoOperacional.getInstance(this)
 
         //Accion del botón "SALIR"
         binding.signOutButton.setOnClickListener {
@@ -33,10 +39,21 @@ class LoginActivity : AppCompatActivity() {
             }
 
             if (dni.isNotEmpty() && password.length == 4) {
-                val intent = Intent(this, MainActivity::class.java)
-                intent.putExtra("dni", dni)
-                startActivity(intent)
-                finish()
+                val c = Cliente()
+                c.setNif(dni)
+                c.setClaveSeguridad(password)
+
+                val clienteLogeado = mbo?.login(c)
+                if (clienteLogeado != null) {
+                    // Autenticación correcta: pasamos el objeto a MainActivity
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("Cliente", clienteLogeado)
+                    startActivity(intent)
+                    finish() //
+                } else {
+                    // Datos incorrectos: mostramos un mensaje de error
+                    Toast.makeText(this, getString(R.string.error_login_failed), Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

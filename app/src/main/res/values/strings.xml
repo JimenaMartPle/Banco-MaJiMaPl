@@ -22,6 +22,7 @@
     <string name="error_user_empty">Introduce el usuario</string>
     <string name="error_pass_empty">Introduce la contraseña</string>
     <string name="error_pass_length">La contraseña debe tener 4 dígitos</string>
+    <string name="error_login_failed">Error de autenticación</string>
 
     <!-- Main -->
     <string name="mainWelcome">Bienvenidx,%1$s</string>
@@ -36,9 +37,10 @@
     <!-- Cambiar contraseña diálogo -->
     <string name="changePassText">Introduce tu nueva contraseña (4 dígitos):</string>
     <string name="cambioOkText">Contraseña actualizada con éxito</string>
+    <!-- Español -->
+    <string name="error_change_pass">Ups, no se pudo cambiar la contraseña 😬</string>
 
     <!-- Transferencias -->
-    <string name="transferenciasTit">Transferencias</string>
     <string name="eligeTuCuenta">Elige tu cuenta</string>
     <string name="leftRadioBut">A mi otra cuenta</string>
     <string name="rightRadioBut">A otra persona</string>
@@ -51,4 +53,19 @@
     <string name="aCuentaPropia">Para ti mismo: </string>
     <string name="aCuentaExterna">Para: </string>
     <string name="toastTransferencia">De: %1$s\n%2$s\nMonto: %3$s %4$s\n¿Comprobante? %5$s</string>
+
+    <!-- Posición global -->
+    <string name="contDescNumCuentaPosGlobal">Número de cuenta</string>
+    <string name="contDescSaldoPosGlobal">Saldo de la cuenta</string>
+    <string name="contDescImgPosGlobal">Imagen de la tarjeta</string>
+    <string name="textNumCuentaPosGlobal">%1$s</string>
+    <string name="textSaldoPosGlobal">%1$s €</string>
+
+    <!-- Movimientos-->
+    <string name="seleccionaSubtit">Selecciona la cuenta:</string>
+    <string name="detallesSubtit">Últimos movimeintos:</string>
+    <string name="textDetalleMov">%1$s</string>
+    <string name="contDescDetalleMovimiento">Detalle movimiento cuenta</string>
+    <string name="textFechaImporteMov">%1$s Importe: %2$.2f</string>
+
 </resources>

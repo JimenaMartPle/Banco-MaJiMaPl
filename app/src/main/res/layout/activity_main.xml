@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurfaceContainerLow"
+    app:theme="@style/basicFont"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +54,7 @@
             android:id="@+id/welcomeCard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/doubleBasicSpace"
             app:strokeWidth="1dp"
             app:strokeColor="?attr/colorTertiary"
             app:cardElevation="0dp"
@@ -71,12 +72,12 @@
                     android:id="@+id/avatarImg"
                     android:layout_width="@dimen/avatarImg"
                     android:layout_height="@dimen/avatarImg"
-                    android:src="@drawable/avatar_girl"
                     android:scaleType="centerCrop"
-                    app:shapeAppearanceOverlay="@style/esquinasRedondeadas"
+                    android:src="@drawable/avatar_girl"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    app:shapeAppearanceOverlay="@style/esquinasRedondeadas" />
 
                 <TextView
                     android:id="@+id/welcomeMsg"

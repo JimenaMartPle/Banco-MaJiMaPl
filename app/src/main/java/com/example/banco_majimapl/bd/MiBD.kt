@@ -8,7 +8,6 @@ import com.example.banco_majimapl.dao.ClienteDAO
 import com.example.banco_majimapl.dao.CuentaDAO
 import com.example.banco_majimapl.dao.MovimientoDAO
 
-
 class MiBD
 /**
  * Constructor de clase

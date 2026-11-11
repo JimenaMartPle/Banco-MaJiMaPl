@@ -20,5 +20,10 @@
     <dimen name="opButtonWidth">300dp</dimen>
     <dimen name="actionButtonWidth">130dp</dimen>
 
+    <!-- Cards -->
+    <dimen name="cardCornerRadius">12dp</dimen>
+    <dimen name="cardWidth">345dp</dimen>
+    <dimen name="cardHeight">90dp</dimen>
+    <dimen name="saldoCuentaText">14sp</dimen>
 
 </resources>

@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sora_semibold"
                 android:padding="@dimen/basicSpace"
-                android:text="@string/transferenciasTit"
+                android:text="@string/opButText3"
                 android:textAlignment="center"
                 android:textColor="?attr/colorSecondary"
                 android:textSize="@dimen/title"
