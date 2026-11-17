@@ -45,7 +45,6 @@
     <!-- Fragment: Posición global -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentAccounts"
-        android:name="com.example.banco_majimapl.AccountsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/doubleBasicSpace"

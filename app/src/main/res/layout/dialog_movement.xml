@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/doubleBasicSpace">
+
+    <ImageView
+        android:id="@+id/dlgIcono"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:padding="@dimen/basicSpace"
+        android:contentDescription="@string/dlgTitulo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/basicSpace">
+
+        <TextView
+            android:id="@+id/dlgImporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sora_semibold"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/subtitle" />
+
+        <TextView
+            android:id="@+id/dlgDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/basicSpace"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="@dimen/saldoCuentaText" />
+
+        <TextView
+            android:id="@+id/dlgFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/basicSpace"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="@dimen/saldoCuentaText" />
+
+        <TextView
+            android:id="@+id/dlgOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/basicSpace"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="@dimen/saldoCuentaText" />
+
+        <TextView
+            android:id="@+id/dlgDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/basicSpace"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="@dimen/saldoCuentaText" />
+    </LinearLayout>
+</LinearLayout>

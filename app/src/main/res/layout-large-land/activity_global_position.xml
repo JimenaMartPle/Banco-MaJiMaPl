@@ -53,7 +53,6 @@
         <!-- Fragments: Posición global-->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentAccounts"
-            android:name="com.example.banco_majimapl.AccountsFragment"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/doubleBasicSpace"
@@ -63,7 +62,6 @@
         <!-- Fragment: Movimientos -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentAccountsDetMove"
-            android:name="com.example.banco_majimapl.AccountsMovementsFragment"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/doubleBasicSpace"

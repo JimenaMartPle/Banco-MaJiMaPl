@@ -2,6 +2,8 @@ package com.example.banco_majimapl
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.banco_majimapl.databinding.ActivityGlobalPositionBinding
 import com.example.banco_majimapl.pojo.Cliente
@@ -43,8 +45,7 @@ class GlobalPositionActivity : AppCompatActivity(), AccountsListener {
 
     override fun onCuentaSeleccionada(cuenta: Cuenta) {
         //Comprobar si en el layout cargado exite el segundo fragment
-        val hayDetalle =
-            supportFragmentManager.findFragmentById(R.id.fragmentAccountsDetMove) != null
+        val hayDetalle =  findViewById<View>(R.id.fragmentAccountsDetMove) != null
 
         if (hayDetalle) {
             //Si estamos en tablet habrá dos fragments, por lo que hacemos:

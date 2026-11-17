@@ -40,6 +40,12 @@ class AccountsMovementsFragment : Fragment() {
         linearLayoutManager = LinearLayoutManager(context)
         itemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
 
+        binding.recyclerMovimientos.apply {
+            layoutManager = linearLayoutManager
+            adapter = movementsAdapter
+            addItemDecoration(itemDecoration)
+        }
+
         return binding.root
     }
 

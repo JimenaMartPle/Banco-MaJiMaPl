@@ -45,7 +45,6 @@
     <!-- Fragment: Movimientos -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentAccountsDetMove"
-        android:name="com.example.banco_majimapl.AccountsMovementsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/doubleBasicSpace"

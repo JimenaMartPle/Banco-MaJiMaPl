@@ -1,46 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Banco-MaJiMaPl</string>
     <string name="login">LOG IN</string>
     <string name="user">Username</string>
     <string name="pass">Password</string>
     <string name="required">Required</string>
-    <string name="signOut">Exit</string>
-    <string name="enter">ENTER</string>
+    <string name="signOut">Log out</string>
+    <string name="enter" tools:ignore="StringEscaping">LET'S GO</string>
     <string name="welcomeImg">background image</string>
     <string name="welcomeSignIn">Sign in</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome">Hey there!</string>
     <string name="guardarBtn">Save</string>
     <string name="cancelarBtn">Cancel</string>
     <string name="enviarBtn">SEND</string>
 
     <!-- Validation errors -->
-    <string name="error_user_empty">Enter your username</string>
+    <string name="error_user_empty">You forgot your username 👀</string>
     <string name="error_pass_empty">Enter your password</string>
-    <string name="error_pass_length">Password must be 4 digits long</string>
-    <string name="error_login_failed">Authentication error</string>
+    <string name="error_pass_length">Needs to be 4 digits</string>
+    <string name="error_login_failed" tools:ignore="StringEscaping">Hmm, that didn't match. Try again</string>
 
     <!-- Main -->
-    <string name="mainWelcome">Welcome,\n%1$s</string>
+    <string name="mainWelcome">Hey!,\n%1$s</string>
     <string name="opButText1">Global position</string>
     <string name="opButText2">Transactions</string>
     <string name="opButText3">Transfers</string>
     <string name="opButText4">Change password</string>
     <string name="opButText5">Promotions</string>
     <string name="opButText6">ATMs</string>
-    <string name="opButText7">Exit</string>
+    <string name="opButText7">Log out</string>
 
     <!-- Change password dialog-->
-    <string name="changePassText">Enter your new password (4 digits):</string>
-    <string name="cambioOkText">Password successfully updated</string>
-    <!-- Inglés -->
+    <string name="changePassText">Pick a new 4-digit PIN:</string>
+    <string name="cambioOkText">All set! Password updated ✨</string>
     <string name="error_change_pass">Oops, password change failed 😬</string>
 
     <!-- Transfers -->
     <string name="eligeTuCuenta">Pay from</string>
     <string name="leftRadioBut">To myself</string>
     <string name="rightRadioBut">To someone else</string>
-    <string name="numCuentaHint">Paste the account details</string>
+    <string name="numCuentaHint">Paste account details</string>
     <string name="enviarJustificante">Send receipt</string>
     <string name="importeEditText">How much?</string>
     <string name="hintImporteEditText">0.000,00</string>
@@ -51,9 +50,9 @@
     <string name="toastTransferencia">From: %1$s\n%2$s\nAmount: %3$s %4$s\nReceipt? %5$s</string>
 
     <!-- Global position -->
-    <string name="contDescNumCuentaPosGlobal">Número de cuenta</string>
-    <string name="contDescSaldoPosGlobal">Saldo de la cuenta</string>
-    <string name="contDescImgPosGlobal">Imagen de la tarjeta</string>
+    <string name="contDescNumCuentaPosGlobal">Account number</string>
+    <string name="contDescSaldoPosGlobal">Account balance</string>
+    <string name="contDescImgPosGlobal">Card image</string>
     <string name="textNumCuentaPosGlobal">%1$s</string>
     <string name="textSaldoPosGlobal">%1$s €</string>
 
@@ -61,6 +60,15 @@
     <string name="seleccionaSubtit">Pick an account:</string>
     <string name="detallesSubtit">Recent activity:</string>
     <string name="textDetalleMov">%1$s</string>
-    <string name="contDescDetalleMovimiento">Details:</string>
-    <string name="textFechaImporteMov">%1$s Amount: %2$.2f</string>
+    <string name="contDescDetalleMovimiento">Transaction details:</string>
+    <string name="textFechaImporteMov">%1$s Amount: %2$.2f €</string>
+
+    <!-- Detailed Dialog -->
+    <string name="dlgTitulo">The breakdown</string>
+    <string name="dlgImporte">Amount: %1$.2f €</string>
+    <string name="dlgDescripcion">Note: %1$s</string>
+    <string name="dlgFecha">Date: %1$s</string>
+    <string name="dlgOrigen">From: %1$s</string>
+    <string name="dlgDestino">To: %1$s</string>
+    <string name="dlgCerrar">Close</string>
 </resources>

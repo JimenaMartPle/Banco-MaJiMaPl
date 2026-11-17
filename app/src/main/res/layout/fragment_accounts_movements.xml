@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorTertiaryContainer"
+    android:background="?attr/colorOnTertiaryContainer"
     tools:context=".AccountsMovementsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             android:padding="@dimen/basicSpace"
             android:text="@string/opButText2"
             android:textAlignment="center"
-            android:textColor="?attr/colorOnTertiaryContainer"
+            android:textColor="?attr/colorTertiaryContainer"
             android:textSize="@dimen/title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:layout_margin="@dimen/basicSpace"
             android:padding="@dimen/basicSpace"
             android:text="@string/detallesSubtit"
-            android:textColor="?attr/colorOnTertiaryContainer"
+            android:textColor="?attr/colorTertiaryContainer"
             android:textSize="@dimen/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
