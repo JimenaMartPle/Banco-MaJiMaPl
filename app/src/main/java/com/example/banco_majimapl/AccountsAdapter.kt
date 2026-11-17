@@ -7,11 +7,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.banco_majimapl.databinding.ItemCuentaBinding
 import com.example.banco_majimapl.pojo.Cuenta
 
-class CuentasAdapter(private val listaCuentas: ArrayList<Cuenta>) :
-    RecyclerView.Adapter<CuentasAdapter.ViewHolder>() {
+class AccountsAdapter(
+    private val listaCuentas: ArrayList<Cuenta>,
+    private val listener: AccountsListener
+) :
+    RecyclerView.Adapter<AccountsAdapter.ViewHolder>() {
 
-    class ViewHolder(val binding: ItemCuentaBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    inner class ViewHolder(val binding: ItemCuentaBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun setListener(cuenta: Cuenta) {
+            binding.root.setOnClickListener {
+                listener.onCuentaSeleccionada(cuenta)
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemCuentaBinding.inflate(
@@ -27,6 +36,8 @@ class CuentasAdapter(private val listaCuentas: ArrayList<Cuenta>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cuenta = listaCuentas[position]
         val context = holder.itemView.context
+
+        holder.setListener(cuenta)
 
         // 1. Número de cuenta formateado con strings.xml
         holder.binding.numCuentaCardPosGlobal.text = context.getString(

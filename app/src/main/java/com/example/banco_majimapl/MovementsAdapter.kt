@@ -10,8 +10,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class MovimientosAdapter(private val listaMovimientos: ArrayList<Movimiento>) :
-    RecyclerView.Adapter<MovimientosAdapter.ViewHolder>() {
+class MovementsAdapter(private val listaMovimientos: ArrayList<Movimiento>) :
+    RecyclerView.Adapter<MovementsAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: ItemMovimientoBinding) :
         RecyclerView.ViewHolder(binding.root)

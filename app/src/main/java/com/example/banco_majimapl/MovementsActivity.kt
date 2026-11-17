@@ -16,7 +16,7 @@ import com.example.banco_majimapl.pojo.Movimiento
 class MovementsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMovementsBinding
-    private lateinit var adapter: MovimientosAdapter
+    private lateinit var adapter: MovementsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +49,7 @@ class MovementsActivity : AppCompatActivity() {
 
         // 5. Configurar RecyclerView con su Adapter
         binding.recyclerMovimientos.layoutManager = LinearLayoutManager(this)
-        adapter = MovimientosAdapter(arrayListOf())
+        adapter = MovementsAdapter(arrayListOf())
         binding.recyclerMovimientos.adapter = adapter
 
         // 6. Escuchar los cambios de selección en el Spinner

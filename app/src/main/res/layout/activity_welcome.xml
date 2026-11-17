@@ -6,6 +6,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?attr/colorSurfaceContainerLow">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/welcomeImg"
+        android:layout_width="match_parent"
+        android:minWidth="380dp"
+        android:layout_height="380dp"
+        android:padding="20dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backwelcome"
+        android:contentDescription="@string/welcomeImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/welcomeGuideline1"
+        app:layout_constraintVertical_bias="0.0" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/welcomeGuideline1"
         android:layout_width="wrap_content"
@@ -40,19 +55,6 @@
         app:layout_constraintBottom_toTopOf="@id/welcomeGuideline1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/welcomeImg"
-        android:layout_width="380dp"
-        android:layout_height="380dp"
-        android:layout_marginTop="25dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/backwelcome"
-        android:contentDescription="@string/welcomeImg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/welcomeGuideline1"
-        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/initWelcome"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurfaceContainerLow"
+    app:theme="@style/basicFont">
+
+    <!-- Card 1: Nombre del banco -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bankNameCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basicSpace"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/doubleBasicSpace"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rocksalt_regular"
+                android:letterSpacing="0.05"
+                android:text="@string/bankName"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="@dimen/title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankNameCard">
+
+        <!-- Fragments: Posición global-->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentAccounts"
+            android:name="com.example.banco_majimapl.AccountsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/doubleBasicSpace"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_accounts" />
+
+        <!-- Fragment: Movimientos -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentAccountsDetMove"
+            android:name="com.example.banco_majimapl.AccountsMovementsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/doubleBasicSpace"
+            android:layout_weight="2"
+            tools:layout="@layout/fragment_accounts_movements" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,7 +48,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".MovimientosAdapter.kt"
+            android:name=".GlobalPositionDetailsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

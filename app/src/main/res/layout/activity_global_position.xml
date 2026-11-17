@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -43,57 +42,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Card 2: Posición global -->
-    <com.google.android.material.card.MaterialCardView
+    <!-- Fragment: Posición global -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentAccounts"
+        android:name="com.example.banco_majimapl.AccountsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/doubleBasicSpace"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bankNameCard"
-        app:strokeWidth="0dp">
+        tools:layout="@layout/fragment_accounts" />
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/doubleBasicSpace"
-            android:fillViewport="true"
-            android:paddingBottom="@dimen/doubleBasicSpace"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/posGlobalTit"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sora_semibold"
-                    android:padding="@dimen/basicSpace"
-                    android:text="@string/opButText1"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorSecondary"
-                    android:textSize="@dimen/title"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerPosGlobal"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/doubleBasicSpace"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/posGlobalTit"
-                    tools:listitem="@layout/item_cuenta" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.core.widget.NestedScrollView>
-    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
